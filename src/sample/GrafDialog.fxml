@@ -28,7 +28,7 @@
                 <ComboBox value = "column or fstring"></ComboBox>
             </HBox>
             <HBox spacing = "5">
-                <Label text = "f(x)=" prefWidth="30"/>
+                <Label text = "f(x)=" minWidth="30"/>
                 <TextField id = "Functionstring" minWidth = "250"/>
             </HBox>
             <Separator orientation="HORIZONTAL"/>
@@ -76,28 +76,27 @@
             </HBox>
             <HBox>
                 <Label text = "FontName" minWidth ="100"/>
-                <Button text = "Font" minWidth = "100"/>
+                <Button text = "Font" minWidth = "100" onAction="#onFontButtonClicked"/>
 
             </HBox>
             <CheckBox text = "FNS"/>
-            <Button text = "Fill" minWidth = "100"/>
-            <Button text = "Color" minWidth = "100"/>
+            <Button text = "Fill" minWidth = "100" onAction="#onFillButtonClicked"/>
+            <Button text = "Color" minWidth = "100" onAction="#onColorButtonClicked"/>
         </VBox>
     </left>
     <center>
         <Separator orientation="VERTICAL" minWidth="10"/>
     </center>
     <right    >
-        <VBox>
+        <VBox spacing = "5">
             <padding>
                 <Insets left="10" top="10"  right="10"   bottom="10"/>
             </padding>
             <Label text = "Choose Object" />
             <ComboBox value = "Object"></ComboBox>
-            <Button text = "Edit Object" minWidth = "100"/>
-            <Button text = "Delete Object" minWidth = "100"/>
-            <Button text =
-                            "Clear All" minWidth = "100"/>
+            <Button text = "Edit " minWidth = "100" onAction="#onEditButtonClicked"/>
+            <Button text = "Delete " minWidth = "100" onAction="#onDeleteButtonClicked"/>
+            <Button text = "Clear All" minWidth = "100" onAction="#onClearButtonClicked"/>
         </VBox>
 
 
@@ -110,9 +109,9 @@
             <Separator orientation="HORIZONTAL"/>
             <HBox spacing="20" alignment="CENTER_RIGHT">
 
-                <Button text = "Save" minWidth = "75"/>
-                <Button text = "Exit|Discard" minWidth = "75"/>
-                <Button text = "Exit|Save" minWidth = "75"/>
+                <Button text = "Save" minWidth = "75" onAction="#onSaveButtonClicked"/>
+                <Button text = "Exit|Discard" minWidth = "75" onAction="#onDiscardButtonClicked"/>
+                <Button text = "Exit|Save" minWidth = "75" onAction="#onExitButtonClicked"/>
             </HBox>
         </VBox>
 
